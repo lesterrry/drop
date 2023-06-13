@@ -62,17 +62,17 @@ renderer.setSize(SIZES.width, SIZES.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 const init = () => {
-	camera.position.set(20, 20, 20)
+	camera.position.set(0, 0, 10)
 	scene.add(camera)
 
-	const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 1)
-	hemiLight.position.set(0, 200, 0)
+	const hemiLight = new THREE.HemisphereLight(0xFFF5E9, 0x444444, 1)
+	hemiLight.position.set(0, 40, 0)
 	scene.add(hemiLight)
 
-	const spotLight = new THREE.SpotLight(0xffffff, 1)
+	const spotLight = new THREE.SpotLight(0xffffff, 0.4)
 	spotLight.angle = Math.PI / 5
 	spotLight.penumbra = 0.8
-	spotLight.position.set(0, 5, 5)
+	spotLight.position.set(4, 16, 20)
 	spotLight.castShadow = true
 	spotLight.shadow.camera.near = 3
 	spotLight.shadow.camera.far = 36
@@ -82,11 +82,11 @@ const init = () => {
 
 	const loader = new FBXLoader()
 	loader.load('/3d/Skyline_v1.fbx', (object) => {
-		// object.rotation.y = 1
+		object.rotation.z = 0.5
 		object.traverse((child) => {
 			if (child.isMesh) {
-				// child.castShadow = true
-				// child.receiveShadow = true
+				child.castShadow = true
+				child.receiveShadow = true
 			}
 		})
 		scene.add(object)
@@ -98,8 +98,8 @@ const init = () => {
 //
 const threeTick = () => {
 	camera.position.x = cursor.x
-	camera.position.y = cursor.y
-	camera.lookAt(new THREE.Vector3(0, 0, 0))
+	camera.position.y = cursor.y + 10
+	camera.lookAt(new THREE.Vector3(0, 8, 0))
 
 	renderer.render(scene, camera)
 
