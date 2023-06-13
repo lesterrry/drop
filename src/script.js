@@ -65,14 +65,13 @@ const init = () => {
 	camera.position.set(0, 0, 10)
 	scene.add(camera)
 
-	const hemiLight = new THREE.HemisphereLight(0xFFF5E9, 0x444444, 1)
-	hemiLight.position.set(0, 40, 0)
+	const hemiLight = new THREE.HemisphereLight(0xFFFFFF, 0x444444, 0.6)
+	hemiLight.position.set(0, 20, 0)
 	scene.add(hemiLight)
 
-	const spotLight = new THREE.SpotLight(0xffffff, 0.4)
+	const spotLight = new THREE.SpotLight(0xFFFFFF, 0.8)
 	spotLight.angle = Math.PI / 5
-	spotLight.penumbra = 0.8
-	spotLight.position.set(4, 16, 20)
+	spotLight.position.set(4, 10, 20)
 	spotLight.castShadow = true
 	spotLight.shadow.camera.near = 3
 	spotLight.shadow.camera.far = 36
@@ -89,6 +88,16 @@ const init = () => {
 				child.receiveShadow = true
 			}
 		})
+		// scene.add(object)
+	})
+
+	loader.load('/3d/Drop_v1.fbx', (object) => {
+		object.traverse((child) => {
+			if (child.isMesh) {
+				child.castShadow = true
+				child.receiveShadow = true
+			}
+		})
 		scene.add(object)
 	})
 }
@@ -97,9 +106,9 @@ const init = () => {
 // Main loop
 //
 const threeTick = () => {
-	camera.position.x = cursor.x
-	camera.position.y = cursor.y + 10
-	camera.lookAt(new THREE.Vector3(0, 8, 0))
+	camera.position.x = (cursor.x + 0.5) * 2
+	camera.position.y = cursor.y + 9
+	camera.lookAt(new THREE.Vector3(0, 6, 0))
 
 	renderer.render(scene, camera)
 
