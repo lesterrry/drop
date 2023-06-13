@@ -1,0 +1,10 @@
+.three {
+  background-color: lightblue;
+  padding: 0;
+}
+
+.three > img {
+  height: 100%;
+  width: 100%;
+}
+

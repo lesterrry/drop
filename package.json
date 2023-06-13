@@ -1,5 +1,5 @@
 {
-  "repository": "https://github.com/lesterrry/PRJ",
+  "repository": "https://github.com/lesterrry/drop",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",

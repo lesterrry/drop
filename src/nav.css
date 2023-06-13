@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgray;
+  width: 800px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: rgba(240, 240, 240, 0.62);
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+nav > p {
+  color: black;
+  margin-bottom: 0 !important;
+}
+
+nav > div {
+  width: 100px;
+}
+
+nav > img {
+  position: absolute;
+}
+

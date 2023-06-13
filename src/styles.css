@@ -1,32 +1,5 @@
-/*************************
-Handcrafted by Aydar N.
-2023
-
-me@aydar.media
-*************************/
-
-@import 'fonts.css';
-
-*, ::after, ::before {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-a, p, h1, h2, h3, h4, h5, h6 {
-	font-family: 'Stolzl';
-}
-
-html, body {
-	overflow: hidden;
-}
-
 body {
   background-color: white;
-}
-
-img, svg {
-	-webkit-user-select: none;
 }
 
 * {
@@ -42,6 +15,10 @@ body > section {
 
 body > section:first-of-type {
   margin-top: 60px;
+}
+
+h1, h2, h3, p, input {
+  font-family: 'Stolzl';
 }
 
 h1 {
@@ -90,6 +67,4 @@ p {
   font-size: 18px;
   font-weight: 400;
 }
-
-
 
