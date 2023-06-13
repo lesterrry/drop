@@ -84,13 +84,11 @@ span {
 
 .inline p {
   color: white;
-  margin-bottom: 0 !important;
   font-size: 18px;
 }
 
 .inline input {
   color: black;
-  margin-bottom: 0 !important;
   font-size: 18px;
   width: 100%;
 }

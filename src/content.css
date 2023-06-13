@@ -50,13 +50,11 @@
   font-weight: 500;
   font-size: 28px;
   line-height: 30px;
-  margin-bottom: 0 !important;
 }
 
 .cards .text p {
   font-size: 18px;
   line-height: 30px;
-  margin-bottom: 0 !important;
 }
 
 .cards .image {
@@ -100,7 +98,6 @@
 .description p {
   position: relative;
   width: 460px;
-  margin-bottom: 0 !important;
   font-size: 22px;
   line-height: 30px;
   font-weight: 100;

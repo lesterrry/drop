@@ -21,7 +21,7 @@ footer .menu {
 }
 
 footer .menu h2 {
-  margin-bottom: 26px;
+  margin-bottom: 12px;
 }
 
 footer .menu h3 {
@@ -35,7 +35,7 @@ footer .copyright {
   display: flex;
   align-content: center;
   align-items: center;
-  margin-top: 68px;
+  margin-top: 120px;
   height: 20px;
 }
 
