@@ -13,7 +13,8 @@ nav {
   width: 800px;
   padding-top: 12px;
   padding-bottom: 12px;
-  background: rgba(212, 231, 237, 0.62);
+/*  background: rgba(212, 231, 237, 0.62);*/
+  background: rgba(240, 240, 240, 0.62);
   border: 4px solid rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);

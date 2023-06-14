@@ -74,12 +74,12 @@ const init = () => {
 
 	const spotLight = new THREE.SpotLight(0xFFF0DF, 0.8)
 	spotLight.angle = Math.PI / 4
-	spotLight.position.set(10, 10, 35)
+	spotLight.position.set(8, 14, 36)
 	spotLight.castShadow = true
 	spotLight.shadow.camera.near = 3
-	spotLight.shadow.camera.far = 36
-	spotLight.shadow.mapSize.width = 4096
-	spotLight.shadow.mapSize.height = 4096
+	spotLight.shadow.camera.far = 50
+	spotLight.shadow.mapSize.width = 8192
+	spotLight.shadow.mapSize.height = 8192
 	scene.add(spotLight)
 
 	const loader = new FBXLoader()
