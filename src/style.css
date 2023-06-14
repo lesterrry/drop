@@ -87,7 +87,14 @@ span {
 	background-color: #C21846;
 }
 
+.field {
+  background-color: #F3F3F3;
+  flex-grow: 1;
+  border-radius: 100px;
+}
+
 .inline {
+	height: 60px;
 	display: flex;
 	align-items: center;
 	padding: 0 40px 0 40px;
@@ -114,3 +121,4 @@ span {
 @import 'nav.css';
 @import 'svg.css';
 @import 'three.css';
+@import 'media.css'

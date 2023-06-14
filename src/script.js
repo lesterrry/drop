@@ -113,7 +113,7 @@ const threeTick = () => {
 	const elapsed = clock.getElapsedTime()
 
 	camera.position.x = (cursor.x + 1) / 2
-	camera.position.y = (cursor.y / 3) + 9
+	camera.position.y = (cursor.y / 2) + 9
 	camera.lookAt(new THREE.Vector3(0, 6, 0))
 
 	if (drop) {
