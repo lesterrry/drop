@@ -72,7 +72,7 @@ const init = () => {
 	hemiLight.position.set(0, 20, 0)
 	scene.add(hemiLight)
 
-	const spotLight = new THREE.SpotLight(0xFFF0DF, 0.8)
+	const spotLight = new THREE.SpotLight(0xFFFFFF, 0.8)
 	spotLight.angle = Math.PI / 4
 	spotLight.position.set(8, 14, 36)
 	spotLight.castShadow = true

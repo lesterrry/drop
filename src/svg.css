@@ -1,4 +1,8 @@
 .logo {
   height: 16px;
 }
+svg.arrow path {
+  fill: none;
+  stroke: black;
+}
 

@@ -1,6 +1,6 @@
 .content {
   background-color: white;
-  margin-top: -50px;
+  margin-top: -60px;
   border-radius: 40px;
   padding: 30px 0 30px 0;
 }
@@ -13,7 +13,16 @@
 }
 
 .content > div:first-of-type {
-  margin-top: 0;
+  margin-top: 60px;
+}
+
+.content > svg {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .content > .heading > .text > h3 {

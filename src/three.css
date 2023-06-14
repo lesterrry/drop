@@ -1,5 +1,6 @@
 .three {
   padding: 0;
+  margin-top: 0;
 }
 
 .three > * {
