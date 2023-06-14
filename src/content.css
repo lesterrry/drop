@@ -44,6 +44,7 @@
 .cards > div {
   width: 360px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .cards .text {
@@ -69,8 +70,10 @@
 .cards .image {
   position: relative;
   width: 100%;
-  border-radius: 32px;
   overflow: hidden;
+  border: 0px solid #E01A4F;
+  border-radius: 32px;
+  z-index: 1;
 }
 
 .cards.short .image {
@@ -91,9 +94,21 @@
   position: absolute;
   bottom: -20px;
   left: -20px;
-  width: 60%;
-  height: initial;
+  height: 80%;
+  width: initial;
   opacity: 60%;
+}
+
+.cards > div:hover .text h3 {
+  color: #E01A4F;
+}
+
+.cards > div:hover .image {
+  border-width: 6px;
+}
+
+.cards > div:hover .overlay {
+  opacity: 100%;
 }
 
 .content > .description {
@@ -127,8 +142,3 @@
   flex-grow: 1;
   border-radius: 100px;
 }
-
-.mailing .button {
-  background-color: #E01A4F;
-}
-

@@ -22,11 +22,17 @@ footer .menu {
 
 footer .menu h2 {
   margin-bottom: 12px;
+  cursor: pointer;
 }
 
 footer .menu h3 {
   margin-bottom: 6px;
   font-weight: 400;
+  cursor: pointer;
+}
+
+footer h3:hover, footer h2:hover {
+  opacity: 60%;
 }
 
 footer .copyright {

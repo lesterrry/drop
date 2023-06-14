@@ -11,6 +11,7 @@ me@aydar.media
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	transition: 0.1s;
 }
 
 a, p, h1, h2, h3, h4, h5, h6 {
@@ -18,7 +19,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-color: white;
+	background-color: white;
 }
 
 img, svg {
@@ -26,42 +27,47 @@ img, svg {
 }
 
 * {
-  margin-top: 0;
-  margin-bottom: 0;
-  box-sizing: border-box;
+	margin-top: 0;
+	margin-bottom: 0;
+	box-sizing: border-box;
 }
 
 body > section {
-  position: relative;
-  width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 h1 {
-  font-weight: 400;
-  font-size: 96px;
-  line-height: 110px;
+	font-weight: 400;
+	font-size: 96px;
+	line-height: 110px;
 }
 
 h2, input {
-  font-weight: 100;
-  font-size: 14px;
-  text-transform: lowercase;
+	font-weight: 100;
+	font-size: 14px;
+	text-transform: lowercase;
 }
 
 input {
-  font-weight: 400;
+	font-weight: 400;
+	font-size: 16px;
 }
 
 h3 {
-  font-weight: 100;
-  font-size: 28px;
-  line-height: 40px;
+	font-weight: 100;
+	font-size: 28px;
+	line-height: 40px;
 }
 
 p {
-  font-weight: 100;
-  font-size: 14px;
-  line-height: 16px;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+a {
+	text-decoration: none;
 }
 
 span {
@@ -69,24 +75,33 @@ span {
 }
 
 .cell {
-  border-radius: 100px;
+	border-radius: 100px;
+}
+
+.button {
+	background-color: #E01A4F;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #C21846;
 }
 
 .inline {
-  display: flex;
-  align-items: center;
-  padding: 0 40px 0 40px;
+	display: flex;
+	align-items: center;
+	padding: 0 40px 0 40px;
 }
 
 .inline p {
-  color: white;
-  font-size: 18px;
+	color: white;
+	font-size: 18px;
 }
 
 .inline input {
-  color: black;
-  font-size: 18px;
-  width: 100%;
+	color: black;
+	font-size: 18px;
+	width: 100%;
 }
 
 .head {
