@@ -48,6 +48,9 @@ let cursor = {
 
 const CANVAS = document.querySelector('canvas.webgl')
 
+let drop
+let skyline
+const clock = new THREE.Clock()
 const camera = new THREE.PerspectiveCamera(75, SIZES.width / SIZES.height, 0.1, 100)
 const scene = new THREE.Scene()
 const renderer = new THREE.WebGLRenderer({
@@ -62,21 +65,21 @@ renderer.setSize(SIZES.width, SIZES.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 const init = () => {
-	camera.position.set(0, 0, 10)
+	camera.position.set(0, 0, 9)
 	scene.add(camera)
 
 	const hemiLight = new THREE.HemisphereLight(0xFFFFFF, 0x444444, 0.6)
 	hemiLight.position.set(0, 20, 0)
 	scene.add(hemiLight)
 
-	const spotLight = new THREE.SpotLight(0xFFFFFF, 0.8)
-	spotLight.angle = Math.PI / 5
-	spotLight.position.set(4, 10, 20)
+	const spotLight = new THREE.SpotLight(0xFFF0DF, 0.8)
+	spotLight.angle = Math.PI / 4
+	spotLight.position.set(10, 10, 35)
 	spotLight.castShadow = true
 	spotLight.shadow.camera.near = 3
 	spotLight.shadow.camera.far = 36
-	spotLight.shadow.mapSize.width = 2048
-	spotLight.shadow.mapSize.height = 2048
+	spotLight.shadow.mapSize.width = 4096
+	spotLight.shadow.mapSize.height = 4096
 	scene.add(spotLight)
 
 	const loader = new FBXLoader()
@@ -88,9 +91,9 @@ const init = () => {
 				child.receiveShadow = true
 			}
 		})
-		// scene.add(object)
+		skyline = object
+		scene.add(object)
 	})
-
 	loader.load('/3d/Drop_v1.fbx', (object) => {
 		object.traverse((child) => {
 			if (child.isMesh) {
@@ -98,6 +101,7 @@ const init = () => {
 				child.receiveShadow = true
 			}
 		})
+		drop = object
 		scene.add(object)
 	})
 }
@@ -106,9 +110,21 @@ const init = () => {
 // Main loop
 //
 const threeTick = () => {
-	camera.position.x = (cursor.x + 0.5) * 2
-	camera.position.y = cursor.y + 9
+	const elapsed = clock.getElapsedTime()
+
+	camera.position.x = (cursor.x + 1) / 2
+	camera.position.y = (cursor.y / 3) + 9
 	camera.lookAt(new THREE.Vector3(0, 6, 0))
+
+	if (drop) {
+		drop.rotation.z = ((- cursor.x) + 1) / 3
+		drop.rotation.x = (Math.sin(elapsed) * 0.05) - 1.6 
+		drop.rotation.y = (Math.cos(elapsed) * 0.01) - 0.01 
+	}
+
+	if (skyline) {
+		skyline.rotation.z = (Math.cos(elapsed) * 0.01) + 0.4 
+	}
 
 	renderer.render(scene, camera)
 
