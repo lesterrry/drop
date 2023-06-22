@@ -30,7 +30,7 @@ footer .menu h3 {
   cursor: pointer;
 }
 
-footer h3:hover, a:hover {
+footer h3:hover, footer a:hover {
   opacity: 60%;
 }
 
