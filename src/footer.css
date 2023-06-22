@@ -22,7 +22,6 @@ footer .menu {
 
 footer .menu h2 {
   margin-bottom: 12px;
-  cursor: pointer;
 }
 
 footer .menu h3 {
@@ -31,7 +30,7 @@ footer .menu h3 {
   cursor: pointer;
 }
 
-footer h3:hover, footer h2:hover {
+footer h3:hover, a:hover {
   opacity: 60%;
 }
 
